@@ -1,0 +1,16 @@
+<h1>Listing Gifs</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Link</th>
+  </tr>
+ 
+  <% @gifs.each do |gif| %>
+    <tr>
+      <td><%= gif.title %></td>
+      <td><img src="<%= gif.link %>"></td>
+      <td><%= link_to 'Show', gif_path(gif) %></td>
+    </tr>
+  <% end %>
+</table>
