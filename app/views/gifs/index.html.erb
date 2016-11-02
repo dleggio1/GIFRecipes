@@ -1,5 +1,46 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+</style>
+
 <h1>Listing Gifs</h1>
- 
+<div class="row">
+  <% @gifs.each do |gif| %>
+    <div class="col-4">
+      <p><%= link_to gif.title, gif_path(gif) %></p>
+      <img src="<%= gif.link %>" height="250" width = "250">
+    </div>
+  <% end %>
+</div>
+
+
+
+
+<!-- OLD TABLE SAVED JUST IN CASE YA KNOW
+<h1>Listing Gifs</h1>
+
 <table>
   <tr>
     <th>Title</th>
@@ -9,8 +50,10 @@
   <% @gifs.each do |gif| %>
     <tr>
       <td><%= gif.title %></td>
-      <td><img src="<%= gif.link %>"></td>
+      <td><img src="<%= gif.link %>" height="250" width = "250"></td>
       <td><%= link_to 'Show', gif_path(gif) %></td>
     </tr>
   <% end %>
 </table>
+
+>
