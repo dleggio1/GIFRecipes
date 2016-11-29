@@ -15,8 +15,8 @@ Background: Gifs in database
   | Peck Dance        | https://m.popkey.co/501456/y6za0.gif                                |                   |           |
 
   Scenario: Search for a gif
-    When I go to the home page,
-    And I fill in "Search" with "Obama"
+    When I go to the home page
+    And I fill in "search" with "Obama"
     And I press "Search"
     Then I should see a gif called "Obama"
     And I should not see a gif called "Jalapeno Poppers"
