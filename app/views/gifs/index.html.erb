@@ -27,7 +27,16 @@
 </style>
 
 <h1>Recipes In A Gif</h1>
+
+<%= form_tag(gifs_path, :method => "get", id: "search-form") do %>
+  <p>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Gifs" %>
+  <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <a href="https://gif-recipes-dleggio1.c9users.io/gifs/new">Upload</a>
+
 <div class="row">
   <% @gifs.each do |gif| %>
     <div class="col-4">
@@ -36,9 +45,6 @@
     </div>
   <% end %>
 </div>
-
-
-
 
 <!-- OLD TABLE SAVED JUST IN CASE YA KNOW
 

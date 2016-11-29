@@ -7,7 +7,7 @@ Feature: Search
 Background: Gifs in database
   
   Given the following gifs exist
-  | title             | link                                                                | recipe            | all_tags      |
+  | title             | link                                                                | recipe            | all_tags  |
   | Obama             | http://gifrific.com/wp-content/uploads/2012/04/obama-skateboard.gif | "Blend 2 minutes" | "Mexican" |
   | Jalapeno Poppers  | http://i.imgur.com/0YdDh9J.gifv                                     |                   |           |
   | Vegan Quesadillas | http://i.imgur.com/uoojePh.gif                                      |                   |           |

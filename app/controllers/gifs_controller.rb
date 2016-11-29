@@ -3,6 +3,8 @@ class GifsController < ApplicationController
     def index
         if params[:tag]
             @gifs = Gif.tagged_with(params[:tag])
+        elsif params[:search]
+            @gifs = Gif.search(params[:search])
         else
             @gifs = Gif.all
         end

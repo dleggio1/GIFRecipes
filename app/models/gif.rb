@@ -15,4 +15,10 @@ class Gif < ApplicationRecord
     def self.tagged_with(name)
         Tag.find_by_name!(name).gifs
     end
+    
+    #search
+    
+    def self.search(search)
+        where("title LIKE ? OR tags LIKE ?", "%#{search}%", "%#{search}%")
+    end
 end
