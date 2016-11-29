@@ -1,7 +1,11 @@
 class GifsController < ApplicationController
     
     def index
-        @gifs = Gif.all
+        if params[:tag]
+            @gifs = Gif.tagged_with(params[:tag])
+        else
+            @gifs = Gif.all
+        end
     end
     
     def show
@@ -20,7 +24,7 @@ class GifsController < ApplicationController
     
     private
     def gif_params
-        params.require(:gif).permit(:title, :link)
+        params.require(:gif).permit(:title, :link, :recipe, :all_tags)
     end
     
 end

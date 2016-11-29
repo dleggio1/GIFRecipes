@@ -6,3 +6,18 @@
 <p>
   <img src="<%= @gif.link %>">
 </p>
+
+<p>
+  <strong>Recipe:</strong>
+  <%= @gif.recipe %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= raw tag_links(@gif.all_tags) %>
+</p>
+
+<% hashtags = @gif.tags.split(" ") %>
+<% hashtags.each do |hashtag| %>
+  <p><% hashtag %></p>
+<% end %>

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-@gifs = Gif.create!([{:title => "Obama", :link => "http://gifrific.com/wp-content/uploads/2012/04/obama-skateboard.gif"},
+@gifs = Gif.create!([{:title => "Obama", :link => "http://gifrific.com/wp-content/uploads/2012/04/obama-skateboard.gif", :recipe => "Blend 2 minutes", :all_tags => "Mexican"},
                     {:title => "Jalapeno Poppers", :link => "http://i.imgur.com/0YdDh9J.gif"},
                     {:title => "Vegan Quesadillas", :link => "http://i.imgur.com/uoojePh.gif"},
                     {:title => "Ramen", :link => "http://i.imgur.com/kqLu1y1.gif"},
