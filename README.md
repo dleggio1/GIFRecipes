@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Recipes In A Gif is a web application devoted to those awesome little cooking videos you see on Facebook. In an instagram-like fashion, users can see a grid of recipe gifs.
 
-Things you may want to cover:
+If you wish to join our project, here are some steps to get started on your local machine:
 
-* Ruby version
+```
+git clone https://github.com/OliverTwizt/GIFRecipes.git
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
