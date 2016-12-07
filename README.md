@@ -12,30 +12,29 @@ If you wish to join our project, here are some steps to get started on your loca
 Clone project from GitHub
 ```
 git clone https://github.com/OliverTwizt/GIFRecipes.git
-
 ```
 
 Cd into project directory
 ```
 cd GIFRecipes
-
 ```
 
 Install required gems
 ```
 bundle install --without production
-
 ```
 
 Seed database with GIFS
 ```
 rake db:seed
-
 ```
 
 Apply DB Migration
 ```
 rake db:migrate
-
+```
+Start server (on cloud 9)
+```
+rails s -b $IP -p $PORT
 ```
 
