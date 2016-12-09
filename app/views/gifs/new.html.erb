@@ -4,6 +4,11 @@
     text-decoration: none;
     color: green;
 }
+  .navbar-link:hover, .navbar-link:visited, .navbar-link:link, .navbar-link:active
+{
+    text-decoration: none;
+    color: white;
+}
   body {
     color: green;
     font-family: Helvetica;
@@ -12,29 +17,19 @@
     text-align: center;
     color: green;
     background-color: #FFFFCC;
-        box-shadow: 0px 4px 8px #888888;
-  }
-
-h1b{
-  text-align: center;
-  font-weight: bold;
-  font-size: 30px;
-  
-}
-
-  h2{
-    display: inline-block;
-    text-decoration: bold;
+    box-shadow: 0px 4px 8px #888888;
   }
   
-  h3{
-    text-decoration: bold;
+  h2{text-align: center;
+    color: green;
+    font-size: 40px;
+    padding: 0px;
   }
-  i{
-      padding: 7px 20px 7px 20px;
-      border: solid green 9px;
-  }
-.b{
+  
+  h3{text-align: center
+    color: white;}
+    
+  .b{
    background: #64e368;
   background-image: -webkit-linear-gradient(top, #64e368, #4CAF50);
   background-image: -moz-linear-gradient(top, #64e368, #4CAF50);
@@ -44,20 +39,22 @@ h1b{
   -webkit-border-radius: 9;
   -moz-border-radius: 9;
   border-radius: 9px;
+  display: inline-block;
   font-family: Helvetica;
   color: white;
   font-size: 19px;
   padding: 7px 20px 7px 20px;
   text-decoration: none;
-      box-shadow: 0px 4px 5px #888888;
+    box-shadow: 0px 4px 5px #888888;
   }
+  input:focus {
+    outline:none;
+}
 
-  * {
-    box-sizing: border-box;
-  }
-  </style>
-  <h1><a href="https://gif-recipes-dleggio1.c9users.io/gifs/"><img src="/images/banner.bmp" alt="recipes-in-a-gif" width="550" height="150"></h1></a>
-<div style="text-align:center">
+  *
+</style>
+<h1><a href="https://gif-recipes-dleggio1.c9users.io/gifs/"><img src="/images/banner2.bmp" alt="recipes-in-a-gif" width="550" height="150"></h1></a>
+<div style="text-align:center;">
 <h1b>Upload GIF</h1b>
 <%= form_for :gif, url: gifs_path do |f| %>
 
