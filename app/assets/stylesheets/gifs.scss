@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-<style type="text/css">
-a:hover, a:visited, a:link, a:active
+  <style type="text/css">
+  a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
     color: green;
@@ -57,7 +57,7 @@ a:hover, a:visited, a:link, a:active
     outline:none;
 }
 
-  {
+  * {
     box-sizing: border-box;
   }
   .row::after {
