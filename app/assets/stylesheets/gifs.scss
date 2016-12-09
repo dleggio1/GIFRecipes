@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-  <style type="text/css">
-  a:hover, a:visited, a:link, a:active
+<style type="text/css">
+a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
     color: green;
@@ -24,12 +24,14 @@
     box-shadow: 0px 4px 8px #888888;
   }
   
-  h2{text-align: center;
+  h2{
+    text-align: center;
     font-size: 20px;
     padding: 0px;
   }
   
-  h3{text-align: center;
+  h3{
+    text-align: center;
     color: white;
   }
     
@@ -83,3 +85,5 @@
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 </style>
+
+
