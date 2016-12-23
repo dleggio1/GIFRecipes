@@ -1,0 +1,141 @@
+<!-- CSS SHIT IGNORE -->
+  <style type="text/css">
+  a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: green;
+}
+  .navbar-link:hover, .navbar-link:visited, .navbar-link:link, .navbar-link:active
+{
+    text-decoration: none;
+    color: white;
+}
+  body {
+    color: white;
+    font-family: Helvetica;
+    background-color: #CCFF99 }
+  h1 {
+    text-align: center;
+    color: green;
+    background-color: #FFFFCC;
+    box-shadow: 0px 4px 8px #888888;
+  }
+  
+  h2{text-align: center;
+    font-size: 20px;
+    padding: 0px;
+  }
+  
+  h3{text-align: center
+    color: white;}
+    
+  .navbar-link{
+   background: #64e368;
+  background-image: -webkit-linear-gradient(top, #64e368, #4CAF50);
+  background-image: -moz-linear-gradient(top, #64e368, #4CAF50);
+  background-image: -ms-linear-gradient(top, #64e368, #4CAF50);
+  background-image: -o-linear-gradient(top, #64e368, #4CAF50);
+  background-image: linear-gradient(to bottom, #64e368, #4CAF50);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  display: inline-block;
+  font-family: Helvetica;
+  color: white;
+  font-size: 19px;
+  padding: 7px 20px 7px 20px;
+  text-decoration: none;
+    box-shadow: 0px 4px 5px #888888;
+  }
+  input:focus {
+    outline:none;
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 0px;
+  }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;
+          height: 350px;
+          border-bottom: 2px solid white;
+          
+  }
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+</style>
+<h1><a href="/gifs" ><img src="/images/banner2.bmp" alt="recipes-in-a-gif" width="550" height="150"></h1></a>
+<div style="text-align:center;">
+
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  <div style=color:green "text-align:center"><strong>Logged in as <%= current_user.email %></strong></div>.
+<%= form_tag(gifs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Gifs" %>
+  <%= submit_tag "Search", :name => nil,  :class => 'navbar-link'%>
+  <%= link_to 'Upload', new_gif_path, :class => 'navbar-link' %> 
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> 
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% end %>
+<% else %>
+  <%= form_tag(gifs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Gifs" %>
+  <%= submit_tag "Search", :name => nil,  :class => 'navbar-link'%>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> 
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+<% end %>
+  
+  
+</div>
+<br>
+<hr width="75%" color="white">
+<br>
+  <div class="row" style="text-align:center">
+  <% @gifs.each do |gif| %>
+    <div class="col-4">
+      <h2><%= link_to gif.title, gif_path(gif)%></h2>
+      <img src="<%= gif.link %>" height="250" width = "250" >
+    </div>
+  <% end %>
+</div>
+
+
+
+
+<!-- OLD TABLE SAVED JUST IN CASE YA KNOW
+
+<h1>Listing Gifs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Link</th>
+  </tr>
+ 
+  <% @gifs.each do |gif| %>
+    <tr>
+      <td><%= gif.title %></td>
+      <td><img src="<%= gif.link %>" height="250" width = "250"></td>
+      <td><%= link_to 'Show', gif_path(gif) %></td>
+    </tr>
+  <% end %>
+</table>
+
+-->

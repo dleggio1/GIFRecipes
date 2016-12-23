@@ -7,12 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-@gifs = Gif.create!([{:title => "Jalapeno Poppers", :link => "http://i.imgur.com/0YdDh9J.gif"},
-                    {:title => "Vegan Quesadillas", :link => "http://i.imgur.com/uoojePh.gif"},
-                    {:title => "Mozerella Sticks", :link => "http://i.imgur.com/d5q4yEb.gif"},
-                    {:title => "Quiche", :link => "https://i.imgur.com/rWt68dm.gif"},
-                    {:title => "Beef Stew", :link => "https://giant.gfycat.com/BossyBothAlaskanmalamute.gif"},
-                    {:title => "Beef Stew", :link => "https://giant.gfycat.com/EvenEssentialLangur.gif"}
+@gifs = Gif.create!([{:title => "Jalapeno Poppers", :link => "http://i.imgur.com/0YdDh9J.gif", :all_tags => "Mexican, Jalapeno"}
                    
                    
                     ])
